@@ -14,10 +14,10 @@ class Window(Frame):
 		# allowing the widget to take the full space of the root window
 		self.pack(fill=BOTH, expand=1)
 
-		mainPanel = LabelFrame(self, text="MainPanel")
-		mainPanel.pack(fill="both", expand="yes")
+		guiPanel = LabelFrame(self)
+		guiPanel.pack(fill="both", expand="yes")
 
-		cubePanel = LabelFrame(mainPanel, text="Cube Controls")
+		cubePanel = LabelFrame(guiPanel, text="Cube Controls")
 		cubePanel.pack(fill="both", expand="yes", side=LEFT)
 
 		vertex = Button(cubePanel, text="Vertex").place(relx=0.0, rely=0.5, anchor=W)
@@ -25,7 +25,7 @@ class Window(Frame):
 		face = Button(cubePanel, text="Face").place(relx=0.5, rely=0.5, anchor=CENTER)
 		zSlider = Scale(cubePanel, from_=-50, to=50, orient=HORIZONTAL, showvalue=False).place(relx=1.0, rely=0.5, anchor=E)
 
-		camPanel = LabelFrame(mainPanel, text="Camera Controls")
+		camPanel = LabelFrame(guiPanel, text="Camera Controls")
 		camPanel.pack(fill="both", expand="yes", side=RIGHT)
 
 		top = Button(camPanel, text="Top").place(relx=0.0, rely=0.5, anchor=W)
