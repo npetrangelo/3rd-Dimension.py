@@ -30,21 +30,21 @@ class Window(Frame):
 		self.camSlider = Scale(self.camPanel, from_=0, to=100, orient=HORIZONTAL, showvalue=False)
 		
 		# allowing the widget to take the full space of the root window
-		self.pack(fill=BOTH, expand="yes")
-		self.canvas.pack(fill="both", expand="yes")
+		self.pack(fill=BOTH, expand=YES)
+		self.canvas.pack(fill=BOTH, expand=YES)
 
-		self.guiPanel.pack(fill="both", expand="yes")
+		self.guiPanel.pack(fill=BOTH, expand=YES)
 
 		self.vertex.place(relx=0.0, rely=0.5, anchor=W)
 		self.edge.place(relx=0.3, rely=0.5, anchor=CENTER)
 		self.face.place(relx=0.5, rely=0.5, anchor=CENTER)
 		self.camSlider.place(relx=1.0, rely=0.5, anchor=E)
-		self.cubePanel.pack(fill="both", expand="yes", side=LEFT)
+		self.cubePanel.pack(fill=BOTH, expand=YES, side=LEFT)
 
 		self.top.place(relx=0.0, rely=0.5, anchor=W)
 		self.front.place(relx=0.5, rely=0.5, anchor=CENTER)
 		self.camSlider.place(relx=1.0, rely=0.5, anchor=E)
-		self.camPanel.pack(fill="both", expand="yes", side=RIGHT)
+		self.camPanel.pack(fill=BOTH, expand=YES, side=RIGHT)
 
 # 		placing the button on my window
 
