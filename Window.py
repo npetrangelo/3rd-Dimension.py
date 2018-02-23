@@ -16,7 +16,7 @@ class Window(Frame):
 
 		self.canvas = Canvas(self, width=768, height=561)
 		self.canvas.pack(fill="both", expand="yes")
-		rect = self.canvas.create_rectangle(50, 25, 150, 75, fill="blue")
+		self.rect = self.canvas.create_rectangle(50, 25, 150, 75, fill="blue")
 
 		self.guiPanel = LabelFrame(self)
 		self.guiPanel.pack(fill="both", expand="yes")
