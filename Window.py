@@ -15,15 +15,15 @@ class Window(Frame):
 		self.canvas = Canvas(self, width=768, height=561)
 		self.rect = self.canvas.create_rectangle(50, 25, 150, 75, fill="blue")
 
-		self.guiPanel = LabelFrame(self)
+		self.UIPanel = LabelFrame(self)
 
-		self.cubePanel = LabelFrame(self.guiPanel, text="Cube Controls")
+		self.cubePanel = LabelFrame(self.UIPanel, text="Cube Controls")
 		self.vertex = Button(self.cubePanel, text="Vertex")
 		self.edge = Button(self.cubePanel, text="Edge")
 		self.face = Button(self.cubePanel, text="Face")
 		self.zSlider = Scale(self.cubePanel, from_=-50, to=50, orient=HORIZONTAL, showvalue=False)
 
-		self.camPanel = LabelFrame(self.guiPanel, text="Camera Controls")
+		self.camPanel = LabelFrame(self.UIPanel, text="Camera Controls")
 
 		self.top = Button(self.camPanel, text="Top")
 		self.front = Button(self.camPanel, text="Front")
@@ -33,7 +33,7 @@ class Window(Frame):
 		self.pack(fill=BOTH, expand=YES)
 		self.canvas.pack(fill=BOTH, expand=YES)
 
-		self.guiPanel.pack(fill=BOTH, expand=YES)
+		self.UIPanel.pack(fill=BOTH, expand=YES)
 
 		self.cubePanel.pack(fill=BOTH, expand=YES, side=LEFT)
 		self.vertex.place(relx=0.0, rely=0.5, anchor=W)
