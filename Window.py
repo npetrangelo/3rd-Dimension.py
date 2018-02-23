@@ -30,7 +30,7 @@ class Window(Frame):
 		self.camSlider = Scale(self.camPanel, from_=0, to=100, orient=HORIZONTAL, showvalue=False)
 		
 		# allowing the widget to take the full space of the root window
-		self.pack(fill=BOTH, expand=1)
+		self.pack(fill=BOTH, expand="yes")
 		self.canvas.pack(fill="both", expand="yes")
 
 		self.guiPanel.pack(fill="both", expand="yes")
