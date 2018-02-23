@@ -14,23 +14,26 @@ class Window(Frame):
 		# allowing the widget to take the full space of the root window
 		self.pack(fill=BOTH, expand=1)
 
-		guiPanel = LabelFrame(self)
-		guiPanel.pack(fill="both", expand="yes")
+		self.canvas = Canvas(self, width=768, height=561).pack(fill="both", expand="yes")
+		rect = self.canvas.create_rectangle(50, 25, 150, 75, fill="blue")
 
-		cubePanel = LabelFrame(guiPanel, text="Cube Controls")
-		cubePanel.pack(fill="both", expand="yes", side=LEFT)
+		self.guiPanel = LabelFrame(self)
+		self.guiPanel.pack(fill="both", expand="yes")
 
-		vertex = Button(cubePanel, text="Vertex").place(relx=0.0, rely=0.5, anchor=W)
-		edge = Button(cubePanel, text="Edge").place(relx=0.3, rely=0.5, anchor=CENTER)
-		face = Button(cubePanel, text="Face").place(relx=0.5, rely=0.5, anchor=CENTER)
-		zSlider = Scale(cubePanel, from_=-50, to=50, orient=HORIZONTAL, showvalue=False).place(relx=1.0, rely=0.5, anchor=E)
+		self.cubePanel = LabelFrame(guiPanel, text="Cube Controls")
+		self.cubePanel.pack(fill="both", expand="yes", side=LEFT)
 
-		camPanel = LabelFrame(guiPanel, text="Camera Controls")
-		camPanel.pack(fill="both", expand="yes", side=RIGHT)
+		self.vertex = Button(cubePanel, text="Vertex").place(relx=0.0, rely=0.5, anchor=W)
+		self.edge = Button(cubePanel, text="Edge").place(relx=0.3, rely=0.5, anchor=CENTER)
+		self.face = Button(cubePanel, text="Face").place(relx=0.5, rely=0.5, anchor=CENTER)
+		self.zSlider = Scale(cubePanel, from_=-50, to=50, orient=HORIZONTAL, showvalue=False).place(relx=1.0, rely=0.5, anchor=E)
 
-		top = Button(camPanel, text="Top").place(relx=0.0, rely=0.5, anchor=W)
-		front = Button(camPanel, text="Front").place(relx=0.5, rely=0.5, anchor=CENTER)
-		camSlider = Scale(camPanel, from_=0, to=100, orient=HORIZONTAL, showvalue=False).place(relx=1.0, rely=0.5, anchor=E)
+		self.camPanel = LabelFrame(guiPanel, text="Camera Controls")
+		self.camPanel.pack(fill="both", expand="yes", side=RIGHT)
+
+		self.top = Button(camPanel, text="Top").place(relx=0.0, rely=0.5, anchor=W)
+		self.front = Button(camPanel, text="Front").place(relx=0.5, rely=0.5, anchor=CENTER)
+		self.camSlider = Scale(camPanel, from_=0, to=100, orient=HORIZONTAL, showvalue=False).place(relx=1.0, rely=0.5, anchor=E)
 # 		placing the button on my window
 
 root = Tk()
