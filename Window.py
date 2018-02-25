@@ -39,7 +39,7 @@ class Window(Frame):
 		self.vertex.place(relx=0.0, rely=0.5, anchor=W)
 		self.edge.place(relx=0.3, rely=0.5, anchor=CENTER)
 		self.face.place(relx=0.5, rely=0.5, anchor=CENTER)
-		self.camSlider.place(relx=1.0, rely=0.5, anchor=E)
+		self.zSlider.place(relx=1.0, rely=0.5, anchor=E)
 
 		self.camPanel.pack(fill=BOTH, expand=YES, side=RIGHT)
 		self.top.place(relx=0.0, rely=0.5, anchor=W)
