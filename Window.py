@@ -13,6 +13,7 @@ class Window(Frame):
 
 		# Define all the widgets
 		self.canvas = Canvas(self, width=768, height=561)
+		self.canvas.config(bg="black")
 		self.rect = self.canvas.create_rectangle(50, 25, 150, 75, fill="blue")
 
 		self.UIPanel = LabelFrame(self)
@@ -55,4 +56,6 @@ root.geometry("896x693")
 
 app = Window(root)
 
-root.mainloop()
+while True:
+	root.update_idletasks()
+	root.update()
