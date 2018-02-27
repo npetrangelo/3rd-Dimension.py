@@ -47,7 +47,14 @@ class Window(Frame):
 		self.front.place(relx=0.5, rely=0.5, anchor=CENTER)
 		self.camSlider.place(relx=0.75, rely=0.5, anchor=CENTER)
 
-# 		placing the button on my window
+	def getInstance(self):
+		return self
+
+	def getZValue(self):
+		return self.zSlider.get()
+
+	def getCamValue(self):
+		return self.camSlider.get() / 100.0
 
 root = Tk()
 
