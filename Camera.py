@@ -17,10 +17,10 @@ class Camera:
 		return (int(image.x * projectionConstant), int(image.y * projectionConstant))
 
 	def getCubeColor():
-		return "#0000FF"
+		return "blue"
 
 	def getIntersectionColor():
-		return "#00FFFF"
+		return "cyan"
 
 	def tranform(self, point):
 		image = CubePoint(point.x, point.y, point.z)
