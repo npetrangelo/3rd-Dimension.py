@@ -16,6 +16,12 @@ class Camera:
 		projectionConstant = mix(focalLength / image.z, orthoZoom, self.factor)
 		return (int(image.x * projectionConstant), int(image.y * projectionConstant))
 
+	def getCubeColor():
+		return "#0000FF"
+
+	def getIntersectionColor():
+		return "#00FFFF"
+
 	def tranform(self, point):
 		image = CubePoint(point.x, point.y, point.z)
 		axis = CubePoint(0.0, 0.0, 0.0)
